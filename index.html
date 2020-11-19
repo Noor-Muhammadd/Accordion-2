@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+ <head> 
+  <style>
+
+button.accordion {
+    background-color:white ;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+
+button.accordion.active,
+button.accordion:hover {
+
+    background-color: #;
+}
+
+
+button.accordion:after {
+
+/* Unicode character for "plus" sign
+(+) is '\02795' */ 
+l
+    content: '\2796';
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+
+button.accordion.active:after {
+
+/* Unicode character for "minus" sign
+(-) is '\2796' */ 
+
+    content: "\2796";
+}
+
+
+div.panel {
+    padding: 0 18px;
+    background-color:;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
+
+div.panel.show {
+    opacity:5 ;
+    max-height: 500px;
+}
+
+</style> 
+ </head> 
+ <body> 
+  <button class="accordion">Date Publish </button> 
+  <div class="panel"> 
+   <input type="radio" id="age1" name="age" value="30"> 
+   <label for="age1">24 Hours</label>
+   <br> 
+   <input type="radio" id="age2" name="age" value="60"> 
+   <label for="age2">3 Days</label>
+   <br> 
+   <input type="radio" id="age3" name="age" value="100"> 
+   <label for="age3">7 Days</label>
+   <br> 
+   <input type="radio" id="age4" name="age" value="100"> 
+   <label for="age4">30 Days</label>
+   <br> 
+  </div> 
+  <button class="accordion">Job Type</button> 
+  <div class="panel"> 
+   <label> <input type="checkbox"> All <br> </label> 
+   <label> <input type="checkbox"> Full-Time Employee&nbsp;(120) <br> </label> 
+  </div> 
+  <button class="accordion">Catagories </button> 
+  <div class="panel"> 
+   <label> <input type="checkbox"> Information Technology <br> </label> 
+   <label> <input type="checkbox"> Engineering <br> </label> 
+   <label> <input type="checkbox"> Professional Services <br> </label> 
+  </div> 
+  <button class="accordion"> Stutas </button> 
+  <div class="panel"> 
+   <label><input type="checkbox"> Maharashtra <br></label> 
+   <label><input type="checkbox"> Chandigarh <br></label> 
+  </div> &nbsp; 
+  <script>
+
+var acc = document
+.getElementsByClassName("accordion");
+
+var i;
+
+for (i = 0; i < acc.length; i++) {
+ acc[i].onclick = function(){
+  this.classList.toggle("active");
+  this.nextElementSibling.classList
+  .toggle("show");
+  }
+}
+
+</script>  
+  <footer> 
+   <p class="programminghero">Learned and developed this site with <a href="http://www.programming-hero.com">Programming Hero</a></p> 
+  </footer>
+ </body>
+</html>
